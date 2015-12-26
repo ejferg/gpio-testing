@@ -3,7 +3,7 @@ var gpio = require("pi-gpio");
 var pin = 3;
 
 gpio.close(pin);
-gpio.open(pin, 'in', function(err) {
+gpio.open(pin, 'in up', function(err) {
 
   var read = function() {
     gpio.read(pin, function(err, value) {
