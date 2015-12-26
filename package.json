@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ejferg/gpio-testing#readme",
   "dependencies": {
-    "gpio": "^0.2.7"
+    "gpio": "^0.2.7",
+    "pi-gpio": "0.0.8"
   }
 }
