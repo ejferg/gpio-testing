@@ -1,11 +1,20 @@
 var gpio = require("pi-gpio");
 
-gpio.close(16);
-gpio.open(16, 'in up', function(err) {
+var pin = 16;
+
+gpio.close(pin);
+gpio.open(pin, 'in up', function(err) {
 
   var read = function() {
-    gpio.read(16, function(err, value) {
-      console.error('Error: ', error);
+    gpio.read(pin, function(err, value) {
+
+      if(err) {
+        console.error('Error: ', err);
+        gpio.close(pin);
+
+        return;
+      }
+
       console.log('Value: ', value);
 
       setTimeout(function(){
