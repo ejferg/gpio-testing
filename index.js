@@ -1,5 +1,6 @@
 var gpio = require("pi-gpio");
 
+gpio.close(16);
 gpio.open(16, 'in up', function(err) {
 
   var read = function() {
