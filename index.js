@@ -4,19 +4,19 @@ var pin = 7;
 
 gpio.open(pin, "output", function(err) {
   console.log(err);
-  gpio.write(pin, 0, function() {
+  gpio.write(pin, 1, function() {
     console.log('Write Complete');
-    gpio.close(pin);
+    // gpio.close(pin);
   });
 
-  // setTimeout(function() {
-  //   console.log('Stop');
-  //   gpio.close(pin);
-  //   // gpio.write(pin, 0, function() {
-  //   //   gpio.close(pin);
-  //   // });
-  //
-  // }, 2000);
+  setTimeout(function() {
+    console.log('Stop');
+    // gpio.close(pin);
+    gpio.write(pin, 0, function() {
+      gpio.close(pin);
+    });
+
+  }, 2000);
 
 });
 
