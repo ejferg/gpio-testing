@@ -9,14 +9,14 @@ gpio.open(pin, "output", function(err) {
     gpio.close(pin);
   });
 
-  setTimeout(function() {
-    console.log('Stop');
-    gpio.close(pin);
-    // gpio.write(pin, 0, function() {
-    //   gpio.close(pin);
-    // });
-
-  }, 2000);
+  // setTimeout(function() {
+  //   console.log('Stop');
+  //   gpio.close(pin);
+  //   // gpio.write(pin, 0, function() {
+  //   //   gpio.close(pin);
+  //   // });
+  //
+  // }, 2000);
 
 });
 
