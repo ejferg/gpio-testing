@@ -4,9 +4,9 @@ var pin = 7;
 
 gpio.open(pin, "output", function(err) {
   console.log(err);
-  gpio.write(pin, 1, function() {
+  gpio.write(pin, 0, function() {
     console.log('Write Complete');
-    // gpio.close(pin);
+    gpio.close(pin);
   });
 
   setTimeout(function() {
